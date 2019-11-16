@@ -8,7 +8,7 @@ var cors = require('cors');
 var mongoose = require('mongoose');
 
 
-let mongoUrl = env.mongoUrl();
+let mongoUrl = env.mongoUrl;
 mongoose.connect( mongoUrl,
     { useNewUrlParser: true });
 mongoose.set('debug', false);
