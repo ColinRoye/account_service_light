@@ -9,26 +9,39 @@ const service = require("./services");
 router.post('/adduser', async (req, res, next)=>{
      let body = req.body;
      let ret = await service.addUser(body.username, body.password, body.email);
-     res.send(ret.status);
+     
+     if(ret.status == env.statusError){
+     	ret.status.error = "anything"
+	res.status("400").send(ret.status)
+     } else{
+       res.send(ret.status);
+     }
 });
 router.post('/verify', async (req, res, next)=>{
      let body = req.body
      debug.log("ROUTES: verification key " + body.key)
      debug.log("ROUTES: email " + body.email)
      debug.log("ROUTES: body " + JSON.stringify(body))
-
      let ret = await service.verify(body.email, body.key);
-     res.send(ret.status);
-})
+
+     if(ret.status == env.statusError){
+        ret.status.error = "anything"
+        res.status("400").send(ret.status)
+     } else{
+       res.send(ret.status);
+     }})
 router.post('/login', async (req, res, next)=>{
      let body = req.body;
      let ret = await service.login(body.username, body.password);
      debug.log(ret.status)
-
+     ret.status.error = "anything"
      if(ret.status == env.statusOk){
           res.cookie("auth", body.username);
+          res.send(ret.status);
+
+     }else{
+	  res.status("400").send(ret.status);
      }
-     res.send(ret.status);
 })
 router.get('/login/:email/:password/:username', async(req, res, next)=>{
      let params = req.params

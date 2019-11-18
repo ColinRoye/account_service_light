@@ -1,0 +1,29 @@
+Attaching to app_web_1, app_postfix_1
+[33mpostfix_1  |[0m postfix/postfix-script: the Postfix mail system is running: PID: 73
+[36mweb_1      |[0m /usr/local/bin/nodemon -> /usr/local/lib/node_modules/nodemon/bin/nodemon.js
+[36mweb_1      |[0m 
+[36mweb_1      |[0m > nodemon@1.19.4 postinstall /usr/local/lib/node_modules/nodemon
+[36mweb_1      |[0m > node bin/postinstall || exit 0
+[36mweb_1      |[0m 
+[36mweb_1      |[0m [32mLove nodemon? You can now support the project via the open collective:[22m[39m
+[36mweb_1      |[0m  > [96m[1mhttps://opencollective.com/nodemon/donate[0m
+[36mweb_1      |[0m 
+[36mweb_1      |[0m npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@1.2.9 (node_modules/nodemon/node_modules/fsevents):
+[36mweb_1      |[0m npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@1.2.9: wanted {"os":"darwin","arch":"any"} (current: {"os":"linux","arch":"x64"})
+[36mweb_1      |[0m 
+[36mweb_1      |[0m + nodemon@1.19.4
+[36mweb_1      |[0m added 221 packages from 128 contributors in 13.154s
+[36mweb_1      |[0m [33m[nodemon] 1.19.4[39m
+[36mweb_1      |[0m [33m[nodemon] to restart at any time, enter `rs`[39m
+[36mweb_1      |[0m [33m[nodemon] watching dir(s): *.*[39m
+[36mweb_1      |[0m [33m[nodemon] watching extensions: js,mjs,json[39m
+[36mweb_1      |[0m [32m[nodemon] starting `node server -d`[39m
+[36mweb_1      |[0m Mon, 04 Nov 2019 03:31:19 GMT body-parser deprecated bodyParser: use individual json/urlencoded middlewares at server.js:25:9
+[36mweb_1      |[0m Mon, 04 Nov 2019 03:31:19 GMT body-parser deprecated undefined extended: provide extended option at node_modules/body-parser/index.js:105:29
+[36mweb_1      |[0m (node:46) DeprecationWarning: current Server Discovery and Monitoring engine is deprecated, and will be removed in a future version. To use the new Server Discover and Monitoring engine, pass option { useUnifiedTopology: true } to the MongoClient constructor.
+[36mweb_1      |[0m Example app listening on port 3001!
+[36mweb_1      |[0m (node:46) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+[36mweb_1      |[0m 
+[36mweb_1      |[0m DEBUG: 
+[36mweb_1      |[0m undefined
+[36mweb_1      |[0m 

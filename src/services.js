@@ -7,7 +7,7 @@ const nodemailer = require('nodemailer');
 
 var transporter = nodemailer.createTransport({
 port: 25,
-host: 'postfix',
+host: '127.0.0.1',
 tls: {
    rejectUnauthorized: false
 },
@@ -78,6 +78,7 @@ module.exports={
 
 
                  await transporter.sendMail(env.verifyEmail(key,email)).catch((e)=>{
+	  	   debug.log(e);
                    ret.status = env.statusError
                  });
 
