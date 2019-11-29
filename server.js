@@ -40,7 +40,24 @@ app.use(bodyParser.json());
 // require('./src/schema');
 app.use(require('./src/routes'));
 
+const detect = require('detect-port');
+
+var start = (port)=>{
+	detect(port)
+	.then(_port => {
+			console.log("ok")
+			if(_port == port){
+				app.listen(port, () => console.log(`Example app listening on port ${port}!`))
+
+			}else{
+				start(port+4)
+			}
 
 
+  }).catch(err => {
+    console.log(err);
+		start(port+4)
+  })
+}
+start(3000);
 
-app.listen(port, () => console.log(`Example app listening on port ${port}!`))

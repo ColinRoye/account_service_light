@@ -17,6 +17,6 @@ module.exports={
      debugEmail: "croye@cs.stonybrook.edu",
      statusOk: {"status": "OK"},
      statusError: {"status":"error"},
-     mongoUrl:'mongodb://130.245.170.213:27017/docker-node-mongo'
+     mongoUrl:'mongodb://130.245.170.225:27017/docker-node-mongo'
 
 }
