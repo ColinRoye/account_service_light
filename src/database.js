@@ -18,7 +18,7 @@ module.exports={
           debug.log("Retrieved User: " + user)
           if(user!=null){
                user.isVerified = true;
-               user.save();
+               await user.save();
                ret.status = env.statusOk;
           }else{
                ret.status = env.statusError;
@@ -40,7 +40,7 @@ module.exports={
                userDoc.verificationKey = user.verificationKey
                debug.log("made it to addUser db")
                debug.log(JSON.stringify(user))
-               userDoc.save();
+               await userDoc.save();
                ret.status = env.statusOk;
           }else{
                debug.log("username or password taken");
