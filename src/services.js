@@ -5,13 +5,13 @@ const uuid = require("uuid/v1")
 const nodemailer = require('nodemailer');
 const axios = require('axios')
 
-// var transporter = nodemailer.createTransport({
-//   port: 25,
-//   host: '127.0.0.1',
-//   tls: {
-//     rejectUnauthorized: false
-//   },
-// });
+var transporter = nodemailer.createTransport({
+  port: 25,
+  host: '127.0.0.1',
+  tls: {
+    rejectUnauthorized: false
+  },
+});
 
 
 module.exports = {
@@ -77,12 +77,12 @@ module.exports = {
 
 
 
-      // await transporter.sendMail(env.verifyEmail(key, email)).catch((e) => {
-      //   debug.log(e);
-      //   ret.status = env.statusError
-      // }).catch((e) => {
-      //   console.log("email not sent")
-      // });
+      await transporter.sendMail(env.verifyEmail(key, email)).catch((e) => {
+        debug.log(e);
+        ret.status = env.statusError
+      }).catch((e) => {
+        console.log("email not sent")
+      });
 
 
 
